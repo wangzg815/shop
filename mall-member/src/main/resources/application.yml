@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://172.18.34.126:3306/mall_ums
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.18.34.126:8849
+  application:
+    name: mall-member
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+        db-config:
+          id-type: auto   #设置主键自增自动
+
+server:
+  port: 8000

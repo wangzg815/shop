@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: mall-coupon
+  cloud:
+    nacos:
+      config:
+        server-addr: 172.18.34.126:8849
+        namespace: 64422c5c-626d-4afd-b6d3-ce4ebf9a1a3f   #命名空间
+        group: 1111   #设置不同组配置
+        extension-configs:  #加载多配置文件
+          - dataId: datasource.yml
+            group: test
+            refresh: true
+
+          - dataId: mybatis.yml
+            group: test
+            refresh: true
+
+          - dataId: other.yml
+            group: other
+            refresh: true
+
